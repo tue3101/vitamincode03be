@@ -11,6 +11,7 @@ public class main {
         calNumberANumberB();
         timnghiem();
         tinhHCN();
+        tinhLaiSuat();
     }
 
     public static void calNumberANumberB() {
@@ -65,4 +66,20 @@ public class main {
         System.out.println("\nCanh nho hon: " +canhnho);
     }
 
+    public static void tinhLaiSuat(){
+        System.out.print("Nhap so tien goc: ");
+        double P = sc.nextDouble();
+
+        System.out.print("\nNhap so nam: ");
+        int T = sc.nextInt();
+
+        int R = 8;
+        System.out.print("\nLai xuat moi nam: " + R+"%");
+
+        double laiSuat=0;
+        for (int i=1; i<=T; i++){
+            laiSuat = (P*R*T)/100;
+        }
+        System.out.print("\nLai xuat sau " + T +" nam: " + laiSuat);
+    }
 }
