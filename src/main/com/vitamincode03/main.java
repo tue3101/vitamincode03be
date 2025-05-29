@@ -12,6 +12,7 @@ public class main {
         timnghiem();
         tinhHCN();
         tinhLaiSuat();
+        kiemTraChanLe();
     }
 
     public static void calNumberANumberB() {
@@ -63,10 +64,10 @@ public class main {
 
         System.out.println("\nChu vi HCN: " + chuVi);
         System.out.println("\nDien tich HCN: " + dienTich);
-        System.out.println("\nCanh nho hon: " +canhnho);
+        System.out.println("\nCanh nho hon: " + canhnho);
     }
 
-    public static void tinhLaiSuat(){
+    public static void tinhLaiSuat() {
         System.out.print("Nhap so tien goc: ");
         double P = sc.nextDouble();
 
@@ -74,12 +75,25 @@ public class main {
         int T = sc.nextInt();
 
         int R = 8;
-        System.out.print("\nLai xuat moi nam: " + R+"%");
+        System.out.print("\nLai xuat moi nam: " + R + "%");
 
-        double laiSuat=0;
-        for (int i=1; i<=T; i++){
-            laiSuat = (P*R*T)/100;
+        double laiSuat = 0;
+        for (int i = 1; i <= T; i++) {
+            laiSuat = (P * R * T) / 100;
         }
-        System.out.print("\nLai xuat sau " + T +" nam: " + laiSuat);
+        System.out.print("\nLai xuat sau " + T + " nam: " + laiSuat);
+    }
+
+    public static void kiemTraChanLe() {
+        int a;
+        do {
+            System.out.print("\nNhap a: ");
+            a = sc.nextInt();
+        }while (a<0);
+
+        if (a % 2 == 0) {
+            System.out.println("\nso " + a + " la so chan");
+        } else
+            System.out.println("\nso " + a + " la so le");
     }
 }
